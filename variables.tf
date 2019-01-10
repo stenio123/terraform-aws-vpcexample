@@ -1,11 +1,14 @@
-variable "prefix" {
+variable "environment" {
   description = "Default prefix to use with your resource names."
-  default     = "myapp"
 }
 
-variable "location" {
-  description = "The location/region where the core network will be created. The full list of Azure regions can be found at https://azure.microsoft.com/regions"
-    default   = "Central US"
+variable "tfe_org" {
+  description = "Name of TFE organization which has workspace containing security group to use."
+}
+
+# Assumes that each workspace tracking resource groups has a unique region
+variable "sg_workspace" {
+  description = "Name of TFE workspace managing deployment of security group to use."
 }
 
 variable "address_space" {
