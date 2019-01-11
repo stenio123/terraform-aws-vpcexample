@@ -4,6 +4,7 @@ variable "cidr_block" {
 }
 
 variable "subnet_cidr" {
+  type = "list"
   description = "The cidr block to use for the subnet."
   # default     = ["10.0.1.0/24"]
 }
