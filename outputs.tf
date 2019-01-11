@@ -1,19 +1,23 @@
-output "vnet_id" {
-  value = "${azurerm_virtual_network.vnet.id}"
+output "vpc_id" {
+  value = "${aws_vpc.main.id}"
 }
 
-output "vnet_name" {
-  value = "${azurerm_virtual_network.vnet.name}"
+output "vpc_arn" {
+  value = "${aws_vpc.main.arn}"
 }
 
-output "vnet_location" {
-  value = "${azurerm_virtual_network.vnet.location}"
+output "main_route_table_id" {
+  value = "${aws_vpc.main.main_route_table_id}"
 }
 
-output "vnet_address_space" {
-  value = "${azurerm_virtual_network.vnet.address_space}"
+output "vpc_cidr_block" {
+  value = "${aws_vpc.main.cidr_block}"
 }
 
-output "vnet_subnets" {
-  value = "${azurerm_subnet.subnet.*.id}"
+output "subnet_id.*" {
+  value = "${aws_subnet.subnet.*.id}"
+}
+
+output "subnet_arn.*" {
+  value = "${aws_subnet.subnet.*.arn}"
 }
