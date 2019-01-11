@@ -1,7 +1,7 @@
-# terraform-aaws-vpcexample
+# terraform-aws-vpcexample
 Simple example showing a deployment of AWS VPC, with variables and outputs.
 
-## Azure authentication
+## AWS authentication
 For complete information on the options available, check: https://www.terraform.io/docs/providers/aws/index.html
 
 Or you can simply set the following environment variables:

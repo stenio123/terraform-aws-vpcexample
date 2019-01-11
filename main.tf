@@ -1,4 +1,4 @@
-# Configure the Azure Provider
+# Configure the AWS Provider
 provider "aws" {
   # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
   version = "=1.55.0"
